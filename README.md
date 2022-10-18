@@ -1,0 +1,1 @@
+**How to use: from a Linux terminal type "docker-compose up -d" .**
