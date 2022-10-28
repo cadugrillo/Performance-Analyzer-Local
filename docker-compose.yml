@@ -11,7 +11,7 @@ services:
     cpus: 0.5
 
   perf-analyzer-api:
-    image: cadugrillo/perf-analyzer-api:1.4
+    image: cadugrillo/perf-analyzer-api:1.5
     container_name: perf-analyzer-api
     restart: always
     mem_limit: 2048m
@@ -29,6 +29,3 @@ services:
         source: ./docker-compose-mosquitto.conf
         target: /mosquitto/config/mosquitto.conf
         read_only: true
-
-   
-
