@@ -1,26 +1,19 @@
 version: "3.7"
 
 services:
-  perf-analyzer-webapp:
-    image: cadugrillo/perf-analyzer-webapp:2.1-local
-    container_name: perf-analyzer-webapp
-    restart: always
-    ports:
-      - 80:80
-    mem_limit: 128m
-    cpus: 0.5
-
   perf-analyzer-api:
     image: cadugrillo/perf-analyzer-api:2.1
     container_name: perf-analyzer-api
-    restart: always
+    restart: unless-stopped
+    ports:
+      - 4300:4300
     mem_limit: 2048m
     cpus: 1.0
  
   mosquitto:
     image: eclipse-mosquitto
     container_name: mosquitto
-    restart: always
+    restart: unless-stopped
     ports:
       - 1883:1883
       - 9884:9884
