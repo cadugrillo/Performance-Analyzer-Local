@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   perf-analyzer-api:
-    image: cadugrillo/perf-analyzer-api:2.1
+    image: cadugrillo/perf-analyzer-api:latest
     container_name: perf-analyzer-api
     restart: unless-stopped
     ports:
